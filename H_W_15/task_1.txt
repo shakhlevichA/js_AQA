@@ -1,0 +1,10 @@
+
+1. Написать чеклист для тестирования сайта: https://www.sharelane.com (8-10 пунктов, должны быть и smoke и critical/extended)
+2. Указать приоритет тестов
+3. Разделить на 2 тест-плана: Smoke и Regression
+4. 4-5 кейсов превратить в тест кейсы
+1. Самостоятельно изучить: Роман Савин: страницы 35-67 (Глава "Искусство создания тест-кейсов")
+2. Создать тесткейсы на https://qase.io/
+
+Пример чеклиста:
+https://docs.google.com/spreadsheets/d/1lGwedNy-92vDf9GMWs3r7wyXw8sHbswUo8YGvXtfZcw/edit?usp=sharing 

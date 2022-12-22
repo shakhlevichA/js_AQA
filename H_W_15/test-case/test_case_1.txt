@@ -1,0 +1,21 @@
+ID
+ SEARCH_1
+
+SUMMARY
+ Validating a search string 
+
+DESCKRIPTION
+ Enter the name of the book from the existing ones in the catalog  (in Latin characters)
+ 
+PreCONDITION
+ The action is performed by authorized users 
+
+STEP AND DESCKRIPTION
+ 1. click on the search bar
+ 2. enter the name of the book that is on the site 
+ 3. press the search button 
+
+EXPECTED RESULT
+ The desired book appears. 
+
+
