@@ -1,0 +1,21 @@
+ID
+ SEARCH_2
+
+SUMMARY
+ Validating a search string 
+
+DESCKRIPTION
+ Enter the author's name (in latin alphabet)
+ 
+PreCONDITION
+ The action is performed by authorized users 
+
+STEP AND DESCKRIPTION
+ 1. click on the search bar
+ 2. enter the name of the author of the book, which is on the site 
+ 3. press the search button 
+
+EXPECTED RESULT
+ The desired book appears. 
+
+
