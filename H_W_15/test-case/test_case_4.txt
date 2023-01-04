@@ -1,0 +1,20 @@
+ID
+ SEARCH_4
+
+SUMMARY
+ Validating a search string 
+
+DESCKRIPTION
+ Enter the title of the book (in Cyrillic)
+ 
+PreCONDITION
+ The action is performed by authorized users 
+
+STEP AND DESCKRIPTION
+ 1. click on the search bar
+ 2. Enter the name of the book in Cyrillic 
+ 3. press the search button 
+
+EXPECTED RESULT
+ An error message appears.
+
