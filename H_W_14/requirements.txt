@@ -1,0 +1,67 @@
+requirements for https://www.sharelane.com
+
+NEW USER REGISTRATION 
+ 1.ZIP code should have 5 digits
+ 
+ 
+ 2. The registration form must contain 4 mandatory fields :
+ First Name*
+ Email*
+ Password*
+ Confirm Password*
+ 
+ 3. And one field is optional :
+ Last Name
+ 
+ 4. Only the Latin alphabet is used in the "first name" and "last name" fields
+ 
+ 5.In the field of "e-mail" is allowed to use Latin alphabet, numbers and allowed special symbols (._@)
+ 
+ 6. Fields "password" and "confirm password" can only contain numbers. They can be up to 5 characters long.
+
+
+  
+SEARCH PAGE
+
+ 1. Search page 
+ takes the Latin alphabet. 
+ 
+ 2. The search is by book title 
+
+
+SHOPPING CART
+ 
+ 1. When you click on cart, a page with fields is loaded:
+ Greeting ( hello ''name'')
+ Search string
+ Section name ("Shopping Cart")
+ Shopping cart status ( cart empty ) or ( cart updated )
+ 
+ 2. When you add a book to cart, the field "section state" changes 
+ from (cart empty ) to (cart updated ) and highlighted in green.
+ 
+ 3. When you add a book to cart, an additional line with 7 sections appears below the "section status" line:
+ author
+ title
+ quantity (the user has the ability to change the quantity)
+ price
+ discount,%	
+ discount,$	
+ total,$
+
+
+DISCOUNTS 
+ Discounts are calculated according to the sum of purchase.  
+ #-----------------------------
+ #basket     | discount, %
+ #-----------------------------
+ #1 - 19     | 0
+ #20 - 49    | 2
+ #50-99      | 3
+ #100-499    | 4
+ #500-999    | 5
+ #1000-4999  | 6
+ #5000-9999  | 7
+ #10000-20000| 8
+
+
