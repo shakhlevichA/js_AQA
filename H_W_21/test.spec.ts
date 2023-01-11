@@ -1,4 +1,5 @@
-// - Написать минимум 5 UI тестов для сайта: https://catalog.onliner.by/
+
+ // - Написать минимум 5 UI тестов для сайта: https://catalog.onliner.by/
 // - При написании использовать различные типы селекторов и локаторов
 // - Добавить методы ожидания элементов
 // - Добавить проверки элементов/текстовых значений
@@ -8,38 +9,9 @@ import { Browser, Builder, By, WebDriver } from "selenium-webdriver";
 import * as chrome from 'selenium-webdriver/chrome';
 import { path } from 'chromedriver';
 
-// describe('e2e', () => {
-//     let driver: WebDriver;
-//     beforeEach(async () => {
-//         const service = new chrome.ServiceBuilder(path);
-//         driver = await new Builder().forBrowser(Browser.CHROME).setChromeService(service).build();
-//         await driver.manage().window().maximize();
-//         await driver.get('https://yandex.by/');    
-//     });
-
-//     afterEach(() => {
-//         driver.quit();
-//     });
-
-//     test('Lesson 21', async () => {
-//         const weatherSelector = By.css('[data-statlog="informers.weather"]');
-//         console.log(await driver.findElement(weatherSelector).getAttribute('aria-label'));
-//     })
-// })
-// async function func() {
-// }
-
-// func();
 
 
-
-
-// - Написать минимум 5 UI тестов для сайта: https://catalog.onliner.by/
-// - При написании использовать различные типы селекторов и локаторов
-// - Добавить методы ожидания элементов
-// - Добавить проверки элементов/текстовых значений
-
-describe('menu', () => {
+describe('Catalog', () => {
     let driver: WebDriver;
     beforeEach(async () => {
         const service = new chrome.ServiceBuilder(path);
@@ -55,83 +27,78 @@ describe('menu', () => {
 
 
 
-//     it('all elements', async () => {
-//         const arrCatalog = [
-//         "Onlíner Prime", 
-//         "Электроника",
-//         "Компьютеры и сети",
-//         "Бытовая техника",
-//         "Стройка и ремонт",
-//         "Дом и сад",
-//         "Авто и мото",
-//         "Красота и спорт",
-//         "Детям и мамам",
-//         "Работа и офис"]
-//         driver.get('https://catalog.onliner.by/');
-//         //while(!driver.executeScript('document.readyState === "complete"'));
-//         const elements = await driver.findElements(By.css("span.catalog-navigation-classifier__item-title-wrapper"));
-//         let i = 0;
-//         let e = 0;
-//         for(let el of elements){
-//             const element = await el.getText();
-//           if(element === arrCatalog[i]) e++
-//            i++            
-//        }
-//        expect(e).toEqual(arrCatalog.length);  
+    it('Navigation classifier > tem title wrapper', async () => {
+        const arrCatalog = [
+        "Onlíner Prime", 
+        "Электроника",
+        "Компьютеры и сети",
+        "Бытовая техника",
+        "Стройка и ремонт",
+        "Дом и сад",
+        "Авто и мото",
+        "Красота и спорт",
+        "Детям и мамам",
+        "Работа и офис"]
+        driver.get('https://catalog.onliner.by/');
+        const elements = await driver.findElements(By.css("span.catalog-navigation-classifier__item-title-wrapper"));
+        let i = 0;
+        let e = 0;
+        for(let el of elements){
+            const element = await el.getText();
+          if(element === arrCatalog[i]) e++; i++            
+       }
+       expect(e).toEqual(arrCatalog.length);  
 
-// })
+})
 
 
-    // it('all elements', async () => {
-    //     const arrCatalog = [
-    //     "Товары на каждый день", 
-    //     "Зроблена ў Беларусі",
-    //     "Суперцены",
-    //     "Игровая зона",
-    //     "Xiomi",
-    //     "Samsung",
-    //     "Apple",
-    //     "Зоотовары"
-    //     ]
-    //     driver.get('https://catalog.onliner.by/');
-    //     while(!driver.executeScript('document.readyState === "complete"'));
-    //     const elements = await driver.findElements(By.css("li.catalog-navigation-classifier__item.catalog-navigation-classifier__item_brand"));
-    //     let i = 0;
-    //     let e = 0;
-    //     for(let el of elements){
-    //         const element = await el.getAttribute('data-item-id');
-    //       if(element === arrCatalog[i]) e++
-    //        i++            
-    //    }
-    //    expect(e).toEqual(arrCatalog.length);  
+    it('Navigation classifier > item brand', async () => {
+        const arrCatalog = [
+        "Товары на каждый день", 
+        "Зроблена ў Беларусі",
+        "Суперцены",
+        "Игровая зона",
+        "Xiomi",
+        "Samsung",
+        "Apple",
+        "Зоотовары"
+        ]
+        driver.get('https://catalog.onliner.by/');
+        while(!driver.executeScript('document.readyState === "complete"'));
+        const elements = await driver.findElements(By.css("li.catalog-navigation-classifier__item.catalog-navigation-classifier__item_brand"));
+        let i = 0;
+        let e = 0;
+        for(let el of elements){
+            const element = await el.getAttribute('data-item-id');
+          if(element === arrCatalog[i]) e++; i++            
+       }
+       expect(e).toEqual(arrCatalog.length);  
 // не понимаю почену в этом случаи  Received: 7, когда терминал показывает 8
-//а если я удаляю "Товары на каждый день" , то значение Received: 0
+// а если я удаляю "Товары на каждый день" , то значение Received: 0
 // пробовал разные селекторы, но результат один.
-//})
+})
 
-//     it('all elements', async () => {
-//         const arrCatalog = [
-//         "https://vk.com/onliner", 
-//         "https://facebook.com/onlinerby",
-//         "https://twitter.com/OnlinerBY",
-//         "https://youtube.com/onlinerby",
-//         ]
-//         driver.get('https://catalog.onliner.by/');
-//         //while(!driver.executeScript('document.readyState === "complete"'));
-//         const elements = await driver.findElements(By.css("a[rel^='noopener'"));
-//         let i = 0;
-//         let e = 0;
-//         for(let el of elements){
-//             const element = await el.getAttribute('href');
-//           if(element === arrCatalog[i]) e++
-//            i++            
-//        }
-//        expect(e).toEqual(arrCatalog.length);  
+    it('footer style > social button', async () => {
+        const arrCatalog = [
+        "https://vk.com/onliner", 
+        "https://facebook.com/onlinerby",
+        "https://twitter.com/OnlinerBY",
+        "https://youtube.com/onlinerby",
+        ]
+        driver.get('https://catalog.onliner.by/');
+        const elements = await driver.findElements(By.css("a[rel^='noopener'"));
+        let i = 0;
+        let e = 0;
+        for(let el of elements){
+            const element = await el.getAttribute('href');
+          if(element === arrCatalog[i]) e++; i++            
+       }
+       expect(e).toEqual(arrCatalog.length);  
 
-// })
+})
 
 
-test('Find elment "Все суперцены" ', async () => {
+it('Find elment "Все суперцены" ', async () => {
     const  actualResult = 'Все суперцены'
         driver.get('https://catalog.onliner.by/');
         while(!driver.executeScript('document.readyState === "complete"'));
@@ -172,7 +139,7 @@ it('footer-style elements', async () => {
     let e = 0;
     for(let el of elements){
         const element = await el.getText();
-      if(element === arrCatalog[i]) e++; i++;            
+      if(element === arrCatalog[i]) e++; i++            
    }
    expect(e).toEqual(arrCatalog.length);  
 
