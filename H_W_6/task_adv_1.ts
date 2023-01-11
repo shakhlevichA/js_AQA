@@ -34,7 +34,7 @@ console.log(match);
     team1: string,
     team2: string,
     matchResult: string,
-	penalty: string
+	penalty?: string
  }
   let liverpoolChelsea:TMatch ={
     team1: '',

@@ -23,7 +23,7 @@ const cat:TAnyCat = {
 const cloneCat:TAnyCat = {...cat}
 cloneCat.age = 15;
 
-const cloneCat2:TAnyCat = structuredClone(cat)//structuredClone is not defined // не понимаю почему
+const cloneCat2:TAnyCat = Object.assign({}, cat)
 cloneCat2.age = 10;
 
 console.log(cat.age);

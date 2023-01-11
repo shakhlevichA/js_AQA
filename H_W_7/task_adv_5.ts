@@ -14,11 +14,13 @@ console.log(arrSunIndex);
 //     sum += arr[i];
    
 // }
+const arrSum = arr.find(el =>el == '1')
+console.log(arrSum)
 
-for(let i = 0; i < arr.length; i++){
+// for(let i = 0; i < arr.length; i++){
    
-   console.log(arr[i]);
-   }
+//    console.log(arr[i]);
+//    }
 
    // ТУТ НЕ МОГУ СООБРАЗИТЬ КАК РЕАЛИЗОВАТЬ УСЛОВИЯ. НУЖНА ТВОЯ ПОДСКАЗКА
    // КАКОЙ ТИП МАССИВА? (string | number)[] или string[] ?

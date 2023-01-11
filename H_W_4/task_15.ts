@@ -8,7 +8,6 @@ const readline = require("readline-sync");
 const strat = Date.now()
 const result:string= readline.question("Type something: ");
 
-//const sumNum  = parseFloat(result.replace(/[^\d]/g, '')) 
 let sumNum  = 0;
 let regexResult: (string | number)[] | null;
 const regexp = /\d/g;

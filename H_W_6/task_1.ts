@@ -11,3 +11,4 @@ delete (obj as any).age;
 delete (obj as any).name;
 
 console.log(obj);
+ 

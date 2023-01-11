@@ -14,14 +14,14 @@ import { path } from 'chromedriver';
 async function func5() {
     const service = new chrome.ServiceBuilder(path);
     let driver: WebDriver = await new Builder().forBrowser(Browser.CHROME).setChromeService(service).build();
-    driver.get('https://store.steampowered.com/');
+    driver.get('https://catalog.onliner.by/');
     while(!driver.executeScript('document.readyState === "complete"'));
     const elements = await driver.findElements(By.css('[id="tab_newreleases_content"] >a'));
     elements.forEach((element:WebElement)=>{
         async function func6(element: WebElement) {
-        console.log(await element.findElement(By.className('tab_item_name')).getText());
-        console.log(await element.findElement(By.className('tab_item_top_tags')).getText());
-        console.log(await element.findElement(By.className('discount_final_price')).getText());       
+        console.log(await element.findElement(By.className('span.catalog-navigation-classifier__item-title-wrapper')).getText());
+        // console.log(await element.findElement(By.className('tab_item_top_tags')).getText());
+        // console.log(await element.findElement(By.className('discount_final_price')).getText());       
         }
         func6(element);
     })
